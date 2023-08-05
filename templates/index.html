@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EBook : index</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="static/main.css">
+
+</head>
+
+<body>
+    <div class="bg">
+        <nav class="navbar navbar-expand-lg navbar-light">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <h1 style="color: #FFFFFF;">&nbsp;&nbsp;&nbsp;&nbsp;Online Books Store&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </h1>
+            <br><br><br><br>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="offset-lg-6">
+                    <form action="">
+                        <input class="sear" type="search" name="search" placeholder="search here....">
+                        <button type="submit" class="search"><i class="fa-solid fa-magnifying-glass"
+                                style="color: #ffffff;"></i></button>
+
+                    </form>
+                </div>
+
+                <ul class=" navbar-nav my-md-4 ">
+
+                    <li class="nav-item active"><a class="nav-link" href="/login"
+                            style="color: #ffffff;"><b>Profile</b></a></li>
+
+                    <li class="nav-item active "><a class="nav-link active" href="#"
+                            style="color: #ffffff;"><b>Setting</b></a></li>
+                    <li class="nav-item active"><a class="nav-link active" href="/login"
+                            style="color: #ffffff;"><b>Login</b></a></li>
+
+
+
+                </ul>
+            </div>
+    </div>
+    </nav>
+    </div>
+
+
+    <div class="row ca">
+        {% for book in books %}
+        <div class="col my-md-5">
+            <div style="width: 18rem;">
+                <img src="{{ book[5] }}" alt="Card image cap">
+                <div>
+                    <h5 class="card-title">{{ book[1] }}</h5>
+                    <p class="card-text">{{ book[2] }}</p><br>
+                </div>
+              
+                    <p class="">Author: {{ book[3] }}</p>
+                    <p class="">ISBN: {{ book[4] }}</p>
+                    <p class="">Price: {{ book[6] }}</p>
+              
+                <div>
+                    <a href="/login" class="btn btn-success my-2 my-sm-1">Buy</a>
+                    <a href="/login" class="btn btn-success my-sm-1">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="container-fluid" style="padding-top:3vh;background-color: rgba(4, 128, 223, 0.5)">
+        <div class="container">
+            <div class="row">
+                <div class="offset-md-5 ">
+                    <div class="row">
+
+                        <div class="row text-center">
+                            <a href="index.html" class="card-text" style="color: #FFFFFF;">&emsp;&emsp;&emsp;&emsp;Home
+                                | </a>
+                            <a href="register.html" class="card-text" style="color: #FFFFFF;">Register | </a>
+                            <a href="#" class="card-text" style="color: #FFFFFF;">Orders | </a>
+                            <a href="#" class="card-text" style="color: #FFFFFF;">Setting</a>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="offset-md-5 col-md-5 my-md-3">
+
+
+                    <div class="row" id="logo">
+                        <a href="#"><i class="fa-brands fa-twitter fa-xl text-center" style="color: #0000ff;"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin fa-xl text-center" style="color: #0000ff;"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram fa-xl text-center" style="color: #e32f2f;"></i></a>
+                        <a href="#"><i class="fa-brands fa-github fa-xl text-center" style="color: #000000;"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook fa-xl text-center" style="color: #0000ff;"></i></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

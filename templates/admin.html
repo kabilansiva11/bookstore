@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/main.css">
+    <style>
+        table{
+            border: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Customer Order Details</h1>
+    <table class="table">
+
+        <tr>
+            <th>Order ID</th>
+            <th>Book ID</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Address</th>
+            <th>State</th>
+            <th>Postcode</th>
+            <th>Date of Order</th>
+        </tr>
+
+
+        <tr>
+            {% for row in rows %}
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+            <td>{{ row[5] }}</td>
+            <td>{{ row[6] }}</td>
+            <td>{{ row[7] }}</td>
+            <td>{{ row[8] }}</td>
+            {% endfor %}
+        </tr>
+
+
+    </table>
+</body>
+
+</html>

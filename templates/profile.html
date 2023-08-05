@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+
+<body>
+    <h1>Profile</h1>
+    <form action="newregister" method="POST">
+ 
+        
+        <div class="form-group">
+            <ul class="list-group list-group-flush">
+               <div class="wrapper">
+                    <img src="https://th.bing.com/th/id/OIP.DGePcjJ-RdJr7oivIaPxGgHaHa?w=195&h=195&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Card image cap">
+                    <input type="file"  class="my_file" id="profile" placeholder="upload image" name="profile">
+                 </div>
+                <p >Name: {{ shipping[1] }}</p>
+                <p >Email Id: {{ shipping[3] }}</p>
+                <p >phoneno: {{ shipping[2] }}</p>
+                <p >address: {{ shipping[4] }}</p>
+                <p >state: {{ shipping[5] }}</p>
+            </ul>
+            <button>save</button>
+        </div>
+        
+        <div class="form-group">
+            <label for="exampleInputEmail1"></label> <input type="email" class="form-control"
+                id="email" aria-describedby="emailHelp" placeholder="Enter email"
+                required="required" name="email">
+        </div>
+        
+    </form>
+</body>
+
+</html>

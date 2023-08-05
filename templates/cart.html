@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EBook : Cart</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <h1>Shopping Cart</h1>
+    <div class="container">
+
+      <div class="product">
+        <img src="{{ product['image_url'] }}" alt="{{ product['product_name'] }}">
+        <h3>{{ product['product_name'] }}</h3>
+        <p>Price: ${{ product['price'] }}</p>
+        <input type="number" id="{{ product['product_id'] }}-quantity" name="quantity" value="1" min="1" max="99">
+        <form action="{{ url_for('remove_from_cart_route', product_id=item.product_id) }}" method="POST">
+          <button type="submit">Remove</button>
+        </form>
+      </div>
+    </div>
+</body>
+
+</html>
